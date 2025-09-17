@@ -7,8 +7,6 @@ body {
 }
 
 header {
-  width: 100%;
-  max-width: 1438px;
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -44,6 +42,7 @@ header nav ul li a {
 .sobre-texto {
   flex: 1; /* ocupa espaço da esquerda */
   font-family: Nunito, sans-serif;
+  font-size: 24px;
 }
 
 .sobre-texto button {
@@ -66,14 +65,8 @@ header nav ul li a {
 }
 
 .skills-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-
+  margin-top: 40px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
 }
 
 .skills-container h2 {
@@ -84,10 +77,18 @@ header nav ul li a {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  margin-top: 20px;
   width: 100%;
+}
+
+.skills-grid div {
+  background-color: #f8f8f8;
+  color: #333;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  font-family: Nunito, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
