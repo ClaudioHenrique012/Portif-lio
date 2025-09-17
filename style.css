@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  max-width: 1438px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: #f8f8f8;
+  font-family: Nunito, sans-serif;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+#sobre {
+  background-color: #f0f0f0;
+  padding: 60px 20px;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  justify-content: space-between; /* texto à esquerda, img à direita */
+  gap: 40px; /* espaço entre os dois */
+}
+
+.sobre-texto {
+  flex: 1; /* ocupa espaço da esquerda */
+  font-family: Nunito, sans-serif;
+}
+
+.sobre-texto button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sobre-imagem img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
+}
+
+.skills-container h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-family: Nunito, sans-serif;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
+}
