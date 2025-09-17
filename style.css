@@ -42,7 +42,11 @@ header nav ul li a {
 .sobre-texto {
   flex: 1; /* ocupa espaço da esquerda */
   font-family: Nunito, sans-serif;
-  font-size: 24px;
+}
+
+.sobre-texto h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .sobre-texto button {
