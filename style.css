@@ -44,14 +44,14 @@ header nav ul li a:hover {
 
 .sobre-container {
   display: flex;
-  align-items: center; /* centraliza verticalmente */
-  justify-content: space-between; /* texto à esquerda, img à direita */
-  gap: 40px; /* espaço entre os dois */
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .sobre-texto {
   color: #f8f8f8;
-  flex: 1; /* ocupa espaço da esquerda */
+  flex: 1;
   font-family: Nunito, sans-serif;
   font-size: 20px;
 }
@@ -154,4 +154,74 @@ header nav ul li a:hover {
   text-align: center;
   flex-direction: column;
   align-items: center;
+}
+
+/* ======================================================= */
+/* INÍCIO DO CÓDIGO RESPONSIVO               */
+/* ======================================================= */
+
+/* Para telas menores, como tablets */
+@media (max-width: 768px) {
+  header {
+    padding: 16px 30px; /* Diminui o padding horizontal */
+    flex-direction: column; /* Coloca o logo e a nav um em cima do outro */
+    height: auto; /* Altura automática para caber o conteúdo */
+    gap: 15px; /* Adiciona um espaço entre o logo e a navegação */
+  }
+
+  header nav ul {
+    gap: 20px; /* Diminui o espaço entre os links */
+    padding: 0;
+  }
+
+  #sobre {
+    padding: 40px 30px; /* Diminui o padding da seção */
+  }
+
+  .sobre-container {
+    flex-direction: column; /* Coloca o texto acima da imagem */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .sobre-imagem img {
+    width: 250px; /* Diminui a imagem */
+    height: 250px;
+  }
+
+  .skills-container,
+  #projetos {
+    padding: 40px 30px; /* Diminui o padding das seções */
+  }
+}
+
+/* Para telas pequenas, como celulares */
+@media (max-width: 480px) {
+  header {
+    padding: 20px;
+  }
+
+  header nav ul {
+    flex-direction: column; /* Links da navegação um abaixo do outro */
+    align-items: center; /* Centraliza os links */
+    gap: 15px;
+  }
+
+  header nav ul li a {
+    font-size: 18px; /* Diminui um pouco a fonte */
+  }
+
+  .sobre-texto h2,
+  #projetos h2 {
+    font-size: 28px; /* Diminui a fonte dos títulos */
+  }
+
+  .sobre-texto {
+    font-size: 18px; /* Diminui a fonte do parágrafo */
+  }
+
+  #sobre,
+  .skills-container,
+  #projetos {
+    padding: 30px 20px; /* Menos padding ainda para telas bem pequenas */
+  }
 }
