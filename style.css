@@ -73,6 +73,11 @@ header nav ul li a:hover {
   transition: background-color 0.3s;
 }
 
+.sobre-texto button:hover {
+  transform: scale(1.07);
+  transition: 0.5s;
+}
+
 .sobre-imagem img {
   border-radius: 50%;
   width: 300px;
@@ -155,15 +160,21 @@ header nav ul li a:hover {
   flex-direction: column;
   align-items: center;
 }
+#contato {
+  color: #f8f8f8;
+  margin-top: 50px;
+  padding: 50px;
+}
 
-/* ======================================================= */
-/* INÍCIO DO CÓDIGO RESPONSIVO               */
-/* ======================================================= */
+#contato h2 {
+  font-size: 30px;
+  font-family: Nunito, sans-serif;
+}
 
 /* Para telas menores, como tablets */
 @media (max-width: 768px) {
   header {
-    padding: 16px 30px; /* Diminui o padding horizontal */
+    padding: 16px 30px;
     flex-direction: column; /* Coloca o logo e a nav um em cima do outro */
     height: auto; /* Altura automática para caber o conteúdo */
     gap: 15px; /* Adiciona um espaço entre o logo e a navegação */
@@ -189,7 +200,8 @@ header nav ul li a:hover {
   }
 
   .skills-container,
-  #projetos {
+  #projetos,
+  #contatos {
     padding: 40px 30px; /* Diminui o padding das seções */
   }
 }
@@ -221,7 +233,8 @@ header nav ul li a:hover {
 
   #sobre,
   .skills-container,
-  #projetos {
+  #projetos,
+  #contatos {
     padding: 30px 20px; /* Menos padding ainda para telas bem pequenas */
   }
 }
