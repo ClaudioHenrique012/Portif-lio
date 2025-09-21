@@ -26,8 +26,8 @@
     <section id="sobre">
   <div class="sobre-container">
     <div class="sobre-texto">
-      <h2>Sobre Mim</h2>
-        <p>Olá Meu nome è Cláudio Henrique, </p>
+      <h2>Sobre <span>Mim</span> </h2>
+        <h1>Olá Meu nome é Cláudio Henrique,</h1>
          <p>sou um desenvolvedor com foco em Frontend, Estou em Transição de carreira da Area da Aviação para tecnologia  </p>
          <a href="assets/CurriculoCláudioDEV2025.pdf" target="_blank"> 
         <button class="download">Download CV</button>
@@ -41,53 +41,61 @@
 </section>
 
 <section id="skills">
-     <div class="skills-container">
-     <h2>My Skills</h2>
-    
-     <div class="skills-grid">
-      
-        <div class="html1">
-          <img src="./img/logo-html-5-256.png" alt="">
-        <h1>HTML</h1>
-        <p>Capacidade de estruturar páginas com HTML semântico, organizando conteúdo de forma acessível e otimizada.</p>
+  <div class="skills-container">
+    <h2>My Skills</h2>
+
+    <div class="carousel-container">
+      <button class="prev">&#10094;</button>
+      <div class="carousel">
+        
+        <div class="card-skill">
+          <img src="./img/logo-python-512.png" alt="Logo Python">
+          <h1>Python</h1>
+          <p>Orientação a objetos, análise de dados básica e lógica de programação.</p>
+        </div>
+
+        <div class="card-skill">
+          <img src="./img/logo-javascript-icon-256.png" alt="Logo JavaScript">
+          <h1>JavaScript</h1>
+          <p>Manipulação do DOM, lógica e criação de interações dinâmicas.</p>
+        </div>
+
+        <div class="card-skill">
+          <img src="./img/logo-react-256.png" alt="Logo React">
+          <h1>React</h1>
+          <p>Primeiros passos em desenvolvimento com React (em evolução).</p>
+        </div>
+
+        <div class="card-skill">
+          <img src="./img/logo-html-5-256.png" alt="Logo HTML">
+          <h1>HTML</h1>
+          <p>Estruturação semântica e acessível de páginas web.</p>
+        </div>
+
+        <div class="card-skill">
+          <img src="./img/logo-css-3-256.png" alt="Logo CSS">
+          <h1>CSS</h1>
+          <p>Estilização responsiva, Flexbox, Grid e boas práticas de design.</p>
+        </div>
+
+        <div class="card-skill">
+          <img src="./img/git-256.png" alt="Logo Git">
+          <h1>Git</h1>
+          <p>Versionamento de código, branches e colaboração em equipe.</p>
+        </div>
+
+        <div class="card-skill">
+          <img src="./img/github-256.png" alt="Logo GitHub">
+          <h1>GitHub</h1>
+          <p>Hospedagem de repositórios, issues e pull requests.</p>
+        </div>
+
       </div>
-
-      <div class="css">
-        <img src="./img/logo-css-3-256.png" alt="">
-        <h1>CSS</h1>
-         <p>Conhecimento em estilização responsiva, flexbox, grid e boas práticas de design visual.</p>
-      </div>
-
-      <div class="javascript">
-        <img src="./img/logo-javascript-icon-256.png" alt="">
-        <h1>JavaScript</h1>
-        <p>Experiência em manipulação do DOM, lógica de programação e criação de interações dinâmicas.</p>
-      </div>
-
-      <div class="git">
-        <img src="./img/git-256.png" alt="">
-        <h1>Git</h1>
-        <p>Versionamento de código com Git e GitHub, criação de branches e colaboração em projetos.</p>
-
-      </div>
-
-      <div class="github">
-        <img src="./img/github-256.png" alt="">
-        <h1>GitHub</h1>
-        <p>Hospedagem de repositórios, gerenciamento de issues e pull requests para colaboração em equipe.</p>
-
-      </div>
-
-      <div class="react">
-        <img src="./img/logo-react-256.png" alt="">
-        <h1>React</h1>
-        <p>Dando os Primeiros Passos com React, EM DESENVOLVIMENTO ...</p>
-
-      </div>
-     </div>
-    
+      <button class="next">&#10095;</button>
     </div>
-    </section>
+  </div>
+</section>
+
     
    <section id="projetos">
   <h2>Projetos</h2>
@@ -113,6 +121,8 @@
 
     <section id="contato">
       <h2>Contato</h2>
-      <p>Você pode me encontrar nas redes sociais ou enviar um email para [
+      <p>Você pode me encontrar nas redes sociais ou enviar um email para</p>
+
+<script src="./script.js"></script>
   </body>
 </html>
