@@ -1,5 +1,5 @@
 body {
-  background: #191f36;
+  background: #032221;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +12,7 @@ html {
 }
 
 header {
-  background: #191f36;
+  background: #032221;
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -34,11 +34,11 @@ header nav ul li a {
   transition: color 0.3s;
 }
 header nav ul li a:hover {
-  color: #007bff;
+  color: #00df48;
 }
 
 #sobre {
-  background-color: #262b40;
+  background-color: #03624c;
   padding: 60px 50px;
 }
 
@@ -57,20 +57,21 @@ header nav ul li a:hover {
 }
 
 .sobre-texto h2 {
-  font-size: 32px;
+  font-size: 50px;
   margin-bottom: 20px;
-  color: #007bff;
+  color: #06302b;
 }
 
 .sobre-texto h2 span {
   color: #f8f8f8;
+  font-size: 45;
 }
 
 .sobre-texto button {
   margin-top: 20px;
   padding: 10px 20px;
   border: none;
-  background-color: #007bff;
+  background-color: #2fa98c;
   color: white;
   font-size: 16px;
   border-radius: 20px;
@@ -118,7 +119,7 @@ header nav ul li a:hover {
   flex: 0 0 80%; /* ocupa 80% do container no celular */
   max-width: 280px; /* mantém o limite máximo */
   margin: 0 10px;
-  background: #262b40;
+  background: #06302b;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
@@ -167,7 +168,7 @@ header nav ul li a:hover {
 }
 
 #projetos {
-  background: #191f36;
+  background: #032221;
   margin-top: 30px;
   padding: 50px;
 }
@@ -179,7 +180,7 @@ header nav ul li a:hover {
 }
 
 #projetos ul {
-  background: #191f36;
+  background: #032221;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -188,7 +189,7 @@ header nav ul li a:hover {
 }
 
 #projetos ul li {
-  background: #262b40;
+  background: #06302b;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   height: 150px;
