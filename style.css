@@ -115,8 +115,8 @@ header nav ul li a:hover {
 }
 
 .card-skill {
-  min-width: 250px;
-  max-width: 280px;
+  flex: 0 0 80%; /* ocupa 80% do container no celular */
+  max-width: 280px; /* mantém o limite máximo */
   margin: 0 10px;
   background: #262b40;
   border-radius: 12px;
@@ -125,6 +125,12 @@ header nav ul li a:hover {
   color: #f8f8f8;
   font-family: Nunito, sans-serif;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .card-skill {
+    flex: 0 0 250px; /* desktop: tamanho fixo */
+  }
 }
 
 .card-skill img {
