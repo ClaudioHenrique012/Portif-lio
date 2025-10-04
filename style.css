@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: Nunito, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -166,56 +166,153 @@ header nav ul li a:hover {
 .next {
   right: 10px;
 }
-
 #projetos {
-  background: #032221;
-  margin-top: 30px;
-  padding: 50px;
+  padding: 60px 20px;
+  background: #032221; /* fundo dark pra destacar os cards */
+  color: #fff;
+  text-align: center;
 }
 
 #projetos h2 {
-  color: #f8f8f8;
-  font-size: 35px;
-  font-family: Nunito, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #f8f8f8; /* cor de destaque */
+}
+.carousel-projetos-container {
+  position: relative;
+  width: 100vw; /* ocupa toda a largura da tela */
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%); /* centraliza o carrossel na tela */
+  overflow: hidden;
 }
 
-#projetos ul {
-  background: #032221;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 0;
-  list-style: none;
+.carousel-projetos {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-#projetos ul li {
-  background: #06302b;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  height: 150px;
+.card-projeto {
+  min-width: 100vw; /* cada slide ocupa toda a largura da tela */
+  height: 80vh; /* altura maior (ajuste como preferir: 70vh, 90vh...) */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Nunito, sans-serif;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0; /* tira bordas arredondadas pra ficar full-screen */
+  overflow: hidden;
 }
 
-#projetos ul li a {
-  text-decoration: none;
-  color: #f8f8f8;
-  height: 90%;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
+.card-projeto .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* overlay escuro */
 }
+
+.card-projeto .info {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  max-width: 70%;
+}
+
+.card-projeto h3 {
+  font-size: 3rem; /* título maior */
+  margin-bottom: 15px;
+  color: #f8f8f8;
+}
+
+.card-projeto p {
+  font-size: 1.3rem; /* texto maior */
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.card-projeto a {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background: #2fa98c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.card-projeto a:hover {
+  background: #03624c;
+}
+
+/* Botões de navegação */
+.prev-projeto,
+.next-projeto {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.prev-projeto:hover,
+.next-projeto:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-projeto {
+  left: 10px;
+}
+.next-projeto {
+  right: 10px;
+}
+
 #contato {
   color: #f8f8f8;
   margin-top: 50px;
   padding: 50px;
 }
+#contato p span {
+  color: #5dd62c;
+  text-align: center;
+  font-family: Nunito, sans-serif;
+}
+
+#contato a {
+  margin: 10px;
+  color: #f8f8f8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#contato a:hover {
+  color: #1da1f2; /* muda a cor ao passar o mouse */
+}
 
 #contato h2 {
   font-size: 30px;
   font-family: Nunito, sans-serif;
+}
+
+footer {
+  display: flex;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  margin-top: 50px;
+  color: #f8f8f8;
+  font-family: Nunito, sans-serif;
+  font-size: 18px;
 }
 
 /* Para telas menores, como tablets */

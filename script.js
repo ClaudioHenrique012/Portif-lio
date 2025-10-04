@@ -37,3 +37,28 @@ prevBtn.addEventListener("click", () => {
 
   carousel.style.transform = `translateX(${-index * cardWidth}px)`;
 });
+
+const carouselProjetos = document.querySelector(".carousel-projetos");
+const cardsProjetos = document.querySelectorAll(".card-projeto");
+const prevProjeto = document.querySelector(".prev-projeto");
+const nextProjeto = document.querySelector(".next-projeto");
+
+let currentIndexProjetos = 0;
+
+function showProjeto(index) {
+  const offset = -index * 100;
+  carouselProjetos.style.transform = `translateX(${offset}%)`;
+}
+
+prevProjeto.addEventListener("click", () => {
+  currentIndexProjetos =
+    (currentIndexProjetos - 1 + cardsProjetos.length) % cardsProjetos.length;
+  showProjeto(currentIndexProjetos);
+});
+
+nextProjeto.addEventListener("click", () => {
+  currentIndexProjetos = (currentIndexProjetos + 1) % cardsProjetos.length;
+  showProjeto(currentIndexProjetos);
+});
+
+showProjeto(currentIndexProjetos);
