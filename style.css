@@ -1,5 +1,5 @@
 body {
-  background: #032221;
+  background: #f8f8f8;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,13 +12,13 @@ html {
 }
 
 header {
-  background: #032221;
+  background: #f8f8f8;
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 80px;
-  color: #f8f8f8;
+  color: #ff5404;
   font-family: Nunito, sans-serif;
 }
 header nav ul {
@@ -29,16 +29,16 @@ header nav ul {
 
 header nav ul li a {
   text-decoration: none;
-  color: #f8f8f8;
+  color: #071925;
   font-size: 20px;
   transition: color 0.3s;
 }
 header nav ul li a:hover {
-  color: #00df48;
+  color: #ff5404;
 }
 
 #sobre {
-  background-color: #03624c;
+  background-color: #eddaba;
   padding: 60px 50px;
 }
 
@@ -50,7 +50,7 @@ header nav ul li a:hover {
 }
 
 .sobre-texto {
-  color: #f8f8f8;
+  color: #071925;
   flex: 1;
   font-family: Nunito, sans-serif;
   font-size: 20px;
@@ -59,11 +59,11 @@ header nav ul li a:hover {
 .sobre-texto h2 {
   font-size: 50px;
   margin-bottom: 20px;
-  color: #06302b;
+  color: #ff5404;
 }
 
 .sobre-texto h2 span {
-  color: #f8f8f8;
+  color: #071925;
   font-size: 45;
 }
 
@@ -71,7 +71,7 @@ header nav ul li a:hover {
   margin-top: 20px;
   padding: 10px 20px;
   border: none;
-  background-color: #2fa98c;
+  background-color: #ff5404;
   color: white;
   font-size: 16px;
   border-radius: 20px;
@@ -100,7 +100,7 @@ header nav ul li a:hover {
   margin-bottom: 10px;
   font-size: 24px;
   font-family: Nunito, sans-serif;
-  color: #f8f8f8;
+  color: #071925;
 }
 
 .carousel-container {
@@ -119,11 +119,11 @@ header nav ul li a:hover {
   flex: 0 0 80%; /* ocupa 80% do container no celular */
   max-width: 280px; /* mantém o limite máximo */
   margin: 0 10px;
-  background: #06302b;
+  background: #eddaba;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  color: #f8f8f8;
+  color: #071925;
   font-family: Nunito, sans-serif;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -168,15 +168,15 @@ header nav ul li a:hover {
 }
 #projetos {
   padding: 60px 20px;
-  background: #032221; /* fundo dark pra destacar os cards */
-  color: #fff;
+  background: #f8f8f8; /* fundo dark pra destacar os cards */
+  color: #071925;
   text-align: center;
 }
 
 #projetos h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #f8f8f8; /* cor de destaque */
+  color: #071925; /* cor de destaque */
 }
 .carousel-projetos-container {
   position: relative;
@@ -235,7 +235,7 @@ header nav ul li a:hover {
   display: inline-block;
   padding: 12px 25px;
   font-size: 1.1rem;
-  background: #2fa98c;
+  background: #ff5404;
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
@@ -243,7 +243,7 @@ header nav ul li a:hover {
 }
 
 .card-projeto a:hover {
-  background: #03624c;
+  background: #ff5404b2;
 }
 
 /* Botões de navegação */
@@ -276,25 +276,25 @@ header nav ul li a:hover {
 }
 
 #contato {
-  color: #f8f8f8;
+  color: #071925;
   margin-top: 50px;
   padding: 50px;
 }
 #contato p span {
-  color: #5dd62c;
+  color: #ff5404;
   text-align: center;
   font-family: Nunito, sans-serif;
 }
 
 #contato a {
   margin: 10px;
-  color: #f8f8f8;
+  color: #071925;
   text-decoration: none;
   transition: 0.3s;
 }
 
 #contato a:hover {
-  color: #1da1f2; /* muda a cor ao passar o mouse */
+  color: #071925b4;
 }
 
 #contato h2 {
@@ -305,17 +305,24 @@ header nav ul li a:hover {
 footer {
   display: flex;
   border-radius: 8px;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center; /* centraliza verticalmente */
   height: 60px;
   width: 100%;
-  margin-top: 50px;
+  margin: 50px 0 0 0; /* margem superior somente */
   color: #f8f8f8;
   font-family: Nunito, sans-serif;
   font-size: 18px;
+  background: #071925; /* cor de fundo para destacar o texto */
+  text-align: center; /* garante que texto quebre centralizado em linhas múltiplas */
 }
 
-/* Para telas menores, como tablets */
+footer p {
+  margin: 0; /* reseta margem padrão do parágrafo */
+  padding: 0 16px; /* pequeno espaçamento lateral em telas pequenas */
+  line-height: 1.2;
+}
+
 @media (max-width: 768px) {
   header {
     padding: 16px 30px;

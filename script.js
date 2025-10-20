@@ -60,5 +60,3 @@ nextProjeto.addEventListener("click", () => {
   currentIndexProjetos = (currentIndexProjetos + 1) % cardsProjetos.length;
   showProjeto(currentIndexProjetos);
 });
-
-showProjeto(currentIndexProjetos);
