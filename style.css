@@ -96,9 +96,16 @@ header nav ul li a:hover {
   padding: 50px;
 }
 
-.skills-container h2 {
+.skills-container h1 {
   margin-bottom: 10px;
   font-size: 24px;
+  font-family: Nunito, sans-serif;
+  color: #071925;
+}
+
+.skills-container .hard-skills {
+  margin-bottom: 10px;
+  font-size: 32px;
   font-family: Nunito, sans-serif;
   color: #071925;
 }
@@ -386,5 +393,180 @@ footer p {
   #projetos,
   #contatos {
     padding: 30px 20px; /* Menos padding ainda para telas bem pequenas */
+  }
+}
+
+.soft-skills-section {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Layout de 2 colunas como na imagem */
+  gap: 2.5rem;
+  max-width: 1100px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.115);
+  margin-top: 4rem;
+}
+
+/* Coluna da Esquerda (Introdução) */
+.skills-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-intro h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.skills-intro > p {
+  /* O parágrafo logo abaixo do H2 */
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.skills-intro h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+/* Coluna da Direita (Lista de Skills) */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card de Skill (Estilo unificado) */
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.skill-icon-wrapper {
+  flex-shrink: 0;
+  background-color: #fff7f5; /* Fundo do ícone laranja claro */
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.skill-icon-wrapper svg {
+  stroke: #ff6b35; /* Cor do ícone laranja */
+  width: 28px;
+  height: 28px;
+}
+
+.skill-info {
+  flex-grow: 1; /* Faz a informação ocupar o espaço restante */
+}
+
+.skill-info h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.skill-info p {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Sistema de "Rating" por Segmento */
+.skill-rating {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.segment {
+  width: 14px;
+  height: 12px;
+  background-color: #eee;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.segment.active {
+  background-color: #ff6b35; /* Cor do segmento preenchido */
+}
+
+/* Botão do Portfólio */
+.btn-portfolio {
+  display: inline-block;
+  background-color: #ff6b35;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1.5rem; /* Espaço acima do botão */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-portfolio:hover {
+  background-color: #e65c2e;
+  transform: translateY(-2px);
+}
+
+/* Responsividade (para celulares) */
+@media (max-width: 900px) {
+  .soft-skills-section {
+    grid-template-columns: 1fr; /* Muda para coluna única */
+    padding: 2rem;
+  }
+
+  .skills-intro h2 {
+    font-size: 2rem;
+  }
+
+  .skills-intro h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 1rem;
+  }
+  .soft-skills-section {
+    padding: 1.5rem;
+    border-width: 4px;
+  }
+  .skill-card {
+    flex-direction: column; /* Empilha o conteúdo do card */
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .skill-rating {
+    margin-top: 0.5rem;
+  }
+
+  .btn-portfolio {
+    width: 100%; /* Faz o botão ocupar a largura total */
   }
 }

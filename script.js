@@ -60,3 +60,24 @@ nextProjeto.addEventListener("click", () => {
   currentIndexProjetos = (currentIndexProjetos + 1) % cardsProjetos.length;
   showProjeto(currentIndexProjetos);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Seleciona todos os cards de habilidade
+  const skillCards = document.querySelectorAll(".skill-card");
+
+  skillCards.forEach((card) => {
+    // Pega o nível da habilidade (de 1 a 10) do atributo data
+    const skillLevel = parseInt(card.dataset.skillLevel, 10);
+
+    // Seleciona todos os segmentos DENTRO deste card
+    const segments = card.querySelectorAll(".skill-rating .segment");
+
+    // Itera e ativa o número correto de segmentos
+    for (let i = 0; i < skillLevel; i++) {
+      // Verifica se o segmento existe antes de adicionar a classe
+      if (segments[i]) {
+        segments[i].classList.add("active");
+      }
+    }
+  });
+});
