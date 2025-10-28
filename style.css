@@ -91,21 +91,15 @@ header nav ul li a:hover {
   object-fit: cover;
 }
 
+/* CARROSSEL HARD SKILLS */
 .skills-container {
   margin-top: 40px;
   padding: 50px;
 }
 
-.skills-container h1 {
+.skills-container h2 {
   margin-bottom: 10px;
   font-size: 24px;
-  font-family: Nunito, sans-serif;
-  color: #071925;
-}
-
-.skills-container .hard-skills {
-  margin-bottom: 10px;
-  font-size: 32px;
   font-family: Nunito, sans-serif;
   color: #071925;
 }
@@ -173,9 +167,149 @@ header nav ul li a:hover {
 .next {
   right: 10px;
 }
+
+/* ====== SOFT SKILLS MODERN GRID ====== */
+
+.soft-skills-modern {
+  background-color: #fafafa;
+  padding: 40px 8%;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.soft-skills-header {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.soft-skills-header h2 {
+  font-size: 1.8rem;
+  color: var(--cor-principal);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.soft-skills-header p {
+  color: #666;
+  font-size: 0.95rem;
+  max-width: 500px;
+}
+
+/* GRID AJUSTADO */
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* CARDS */
+.soft-skill-card-modern {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  padding: 20px 22px;
+  transition: all 0.3s ease;
+  border: 1px solid #f1f1f1;
+}
+
+.soft-skill-card-modern:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ÍCONE */
+.skill-icon {
+  background-color: rgba(255, 84, 4, 0.08);
+  color: var(--cor-principal);
+  font-size: 1.6rem;
+  border-radius: 10px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+/* TÍTULOS E DESCRIÇÕES */
+.skill-info {
+  width: 100%;
+}
+
+.skill-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.skill-title h3 {
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.skill-title span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-principal);
+}
+
+.skill-info p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* BARRAS DE PROGRESSO */
+.progress-bar {
+  background-color: #eaeaea;
+  border-radius: 8px;
+  height: 6px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.progress-fill {
+  background-color: #ff5404; /* mantém o padrão do site */
+  height: 100%;
+  width: 0;
+  border-radius: 8px;
+  transition: width 1s ease;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .soft-skills-modern {
+    padding: 30px 6%;
+  }
+
+  .soft-skill-card-modern {
+    padding: 18px;
+  }
+
+  .skill-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+  }
+
+  .skill-title h3 {
+    font-size: 1rem;
+  }
+}
+
+/* ===============================
+   PROJETOS
+   =============================== */
 #projetos {
   padding: 60px 20px;
-  background: #f8f8f8; /* fundo dark pra destacar os cards */
+  background: #f8f8f8;
   color: #071925;
   text-align: center;
 }
@@ -183,14 +317,14 @@ header nav ul li a:hover {
 #projetos h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #071925; /* cor de destaque */
+  color: #071925;
 }
 .carousel-projetos-container {
   position: relative;
-  width: 100vw; /* ocupa toda a largura da tela */
+  width: 100vw;
   margin: 0;
   left: 50%;
-  transform: translateX(-50%); /* centraliza o carrossel na tela */
+  transform: translateX(-50%);
   overflow: hidden;
 }
 
@@ -200,22 +334,22 @@ header nav ul li a:hover {
 }
 
 .card-projeto {
-  min-width: 100vw; /* cada slide ocupa toda a largura da tela */
-  height: 80vh; /* altura maior (ajuste como preferir: 70vh, 90vh...) */
+  min-width: 100vw;
+  height: 80vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
-  border-radius: 0; /* tira bordas arredondadas pra ficar full-screen */
+  border-radius: 0;
   overflow: hidden;
 }
 
 .card-projeto .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* overlay escuro */
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .card-projeto .info {
@@ -227,13 +361,13 @@ header nav ul li a:hover {
 }
 
 .card-projeto h3 {
-  font-size: 3rem; /* título maior */
+  font-size: 3rem;
   margin-bottom: 15px;
   color: #f8f8f8;
 }
 
 .card-projeto p {
-  font-size: 1.3rem; /* texto maior */
+  font-size: 1.3rem;
   margin-bottom: 20px;
   line-height: 1.6;
 }
@@ -253,7 +387,62 @@ header nav ul li a:hover {
   background: #ff5404b2;
 }
 
-/* Botões de navegação */
+/*REPOSITORIOS*/
+#repositorios {
+  padding: 60px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+#repositorios h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.repositorios-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.repo-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.repo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.repo-card h3 a {
+  color: #ff5404;
+  text-decoration: none;
+}
+
+.repo-card p {
+  color: #444;
+  margin: 10px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.repo-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Botões de navegação PROJETOS */
 .prev-projeto,
 .next-projeto {
   position: absolute;
@@ -311,55 +500,66 @@ header nav ul li a:hover {
 
 footer {
   display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: center; /* centraliza verticalmente */
+  justify-content: center;
+  align-items: center;
   height: 60px;
   width: 100%;
-  margin: 50px 0 0 0; /* margem superior somente */
+  margin: 50px 0 0 0;
   color: #f8f8f8;
   font-family: Nunito, sans-serif;
   font-size: 18px;
-  background: #071925; /* cor de fundo para destacar o texto */
-  text-align: center; /* garante que texto quebre centralizado em linhas múltiplas */
+  background: #071925;
+  text-align: center;
 }
 
 footer p {
-  margin: 0; /* reseta margem padrão do parágrafo */
-  padding: 0 16px; /* pequeno espaçamento lateral em telas pequenas */
+  margin: 0;
+  padding: 0 16px;
   line-height: 1.2;
 }
 
 @media (max-width: 768px) {
   header {
     padding: 16px 30px;
-    flex-direction: column; /* Coloca o logo e a nav um em cima do outro */
-    height: auto; /* Altura automática para caber o conteúdo */
-    gap: 15px; /* Adiciona um espaço entre o logo e a navegação */
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
   }
 
   header nav ul {
-    gap: 20px; /* Diminui o espaço entre os links */
+    gap: 20px;
     padding: 0;
   }
 
   #sobre {
-    padding: 40px 30px; /* Diminui o padding da seção */
+    padding: 40px 30px;
   }
 
   .sobre-container {
-    flex-direction: column; /* Coloca o texto acima da imagem */
-    text-align: center; /* Centraliza o texto */
+    flex-direction: column;
+    text-align: center;
   }
 
   .sobre-imagem img {
-    width: 250px; /* Diminui a imagem */
+    width: 250px;
     height: 250px;
   }
 
   .skills-container,
+  .soft-skills-container, /* Adicionado responsividade */
   #projetos,
   #contatos {
-    padding: 40px 30px; /* Diminui o padding das seções */
+    padding: 40px 30px;
+  }
+
+  /* Adicionado responsividade */
+  .skills-grid {
+    grid-template-columns: 1fr; /* Uma coluna em celulares */
+  }
+
+  /* Adicionado responsividade */
+  .soft-skill-card p {
+    min-height: auto; /* Remove a altura mínima em celulares */
   }
 }
 
@@ -370,203 +570,29 @@ footer p {
   }
 
   header nav ul {
-    flex-direction: column; /* Links da navegação um abaixo do outro */
-    align-items: center; /* Centraliza os links */
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
   }
 
   header nav ul li a {
-    font-size: 18px; /* Diminui um pouco a fonte */
+    font-size: 18px;
   }
 
   .sobre-texto h2,
   #projetos h2 {
-    font-size: 28px; /* Diminui a fonte dos títulos */
+    font-size: 28px;
   }
 
   .sobre-texto {
-    font-size: 18px; /* Diminui a fonte do parágrafo */
+    font-size: 18px;
   }
 
   #sobre,
   .skills-container,
+  .soft-skills-container, /* Adicionado responsividade */
   #projetos,
   #contatos {
-    padding: 30px 20px; /* Menos padding ainda para telas bem pequenas */
-  }
-}
-
-.soft-skills-section {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr; /* Layout de 2 colunas como na imagem */
-  gap: 2.5rem;
-  max-width: 1100px;
-  width: 100%;
-  background-color: #ffffff;
-  padding: 3rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.115);
-  margin-top: 4rem;
-}
-
-/* Coluna da Esquerda (Introdução) */
-.skills-intro {
-  display: flex;
-  flex-direction: column;
-}
-
-.skills-intro h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2d2d2d;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.skills-intro > p {
-  /* O parágrafo logo abaixo do H2 */
-  font-size: 1rem;
-  color: #777;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.skills-intro h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #2d2d2d;
-  margin-bottom: 1rem;
-}
-
-/* Coluna da Direita (Lista de Skills) */
-.skills-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* Card de Skill (Estilo unificado) */
-.skill-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background-color: #ffffff;
-  border-radius: 15px;
-  padding: 1.5rem;
-  border: 1px solid #eee;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
-}
-
-.skill-icon-wrapper {
-  flex-shrink: 0;
-  background-color: #fff7f5; /* Fundo do ícone laranja claro */
-  padding: 1rem;
-  border-radius: 12px;
-}
-
-.skill-icon-wrapper svg {
-  stroke: #ff6b35; /* Cor do ícone laranja */
-  width: 28px;
-  height: 28px;
-}
-
-.skill-info {
-  flex-grow: 1; /* Faz a informação ocupar o espaço restante */
-}
-
-.skill-info h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0 0 0.25rem 0;
-}
-
-.skill-info p {
-  font-size: 0.85rem;
-  color: #888;
-  margin: 0;
-  line-height: 1.5;
-}
-
-/* Sistema de "Rating" por Segmento */
-.skill-rating {
-  display: flex;
-  gap: 4px;
-  flex-shrink: 0;
-}
-
-.segment {
-  width: 14px;
-  height: 12px;
-  background-color: #eee;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
-}
-
-.segment.active {
-  background-color: #ff6b35; /* Cor do segmento preenchido */
-}
-
-/* Botão do Portfólio */
-.btn-portfolio {
-  display: inline-block;
-  background-color: #ff6b35;
-  color: #ffffff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
-  text-align: center;
-  margin-top: 1.5rem; /* Espaço acima do botão */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn-portfolio:hover {
-  background-color: #e65c2e;
-  transform: translateY(-2px);
-}
-
-/* Responsividade (para celulares) */
-@media (max-width: 900px) {
-  .soft-skills-section {
-    grid-template-columns: 1fr; /* Muda para coluna única */
-    padding: 2rem;
-  }
-
-  .skills-intro h2 {
-    font-size: 2rem;
-  }
-
-  .skills-intro h3 {
-    font-size: 1.25rem;
-  }
-}
-
-@media (max-width: 500px) {
-  body {
-    padding: 1rem;
-  }
-  .soft-skills-section {
-    padding: 1.5rem;
-    border-width: 4px;
-  }
-  .skill-card {
-    flex-direction: column; /* Empilha o conteúdo do card */
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .skill-rating {
-    margin-top: 0.5rem;
-  }
-
-  .btn-portfolio {
-    width: 100%; /* Faz o botão ocupar a largura total */
+    padding: 30px 20px;
   }
 }

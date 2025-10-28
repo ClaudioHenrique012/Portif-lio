@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Portfólio</title>
+
+    <!-- Ícones -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fontes Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wdth,wght@75,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:wght@200..1000&family=Playfair+Display:wght@400..900&display=swap"
       rel="stylesheet"
     />
-    <title>Meu Portifólio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- ======= CABEÇALHO ======= -->
     <header>
-      <h1 class="portifólio">Portifólio</h1>
+      <h1 class="portifolio">Portfólio</h1>
       <nav>
         <ul>
           <li><a href="#sobre">Sobre Mim</a></li>
@@ -29,14 +37,15 @@
       </nav>
     </header>
 
+    <!-- ======= SEÇÃO SOBRE ======= -->
     <section id="sobre">
       <div class="sobre-container">
         <div class="sobre-texto">
           <h2>Sobre <span>Mim</span></h2>
-          <h1>Olá Meu nome é Cláudio Henrique,</h1>
+          <h1>Olá, meu nome é Cláudio Henrique</h1>
           <p>
-            Sou um Desenvolvedor com foco em Frontend, Estou em Transição de
-            carreira da Area da Aviação para a de Tecnologia, Venha me conhecer
+            Sou um desenvolvedor com foco em Frontend. Estou em transição de
+            carreira da área da aviação para a de tecnologia. Venha me conhecer
             um pouco mais...
           </p>
           <a href="assets/CurriculoCláudioDEV2025.pdf" target="_blank">
@@ -53,126 +62,98 @@
       </div>
     </section>
 
-    <section class="soft-skills-section">
-      <div class="skills-intro">
-        <h2>My Soft Skills</h2>
+    <section class="soft-skills-modern">
+      <div class="soft-skills-header">
+        <h2>Habilidades Interpessoal</h2>
         <p>
-          Your of the soft skills arescurluing ar commudime softaress
-          pectronighs the sopt skills.
+          Um resumo das minhas principais habilidades interpessoais e
+          comportamentais.
         </p>
-
-        <h3>Soft skills</h3>
-
-        <div class="skill-card" data-skill-level="10">
-          <div class="skill-icon-wrapper">
-            <img src="assets/imagens/trabalho-eqp.svg" alt="" />
-          </div>
-          <div class="skill-info">
-            <h4>Trabalho em Equipe</h4>
-            <p>
-              Profissional com vasta experiência em trabalho em equipe,
-              trabalhando sempre em otimas equipes
-            </p>
-          </div>
-
-          <div class="skill-rating">
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-          </div>
-        </div>
-
-        <a href="#" class="btn-portfolio">VIEW MY FULL PORTFOLIO</a>
       </div>
 
-      <div class="skills-list">
-        <div class="skill-card" data-skill-level="7">
-          <div class="skill-icon-wrapper">
-            <img src="assets/imagens/comunicação.svg" alt="" />
+      <div class="soft-skills-grid">
+        <div class="soft-skill-card-modern" data-skill-level="100">
+          <div class="skill-icon">
+            <i class="fa-solid fa-people-group"></i>
           </div>
           <div class="skill-info">
-            <h4>Comunição</h4>
+            <div class="skill-title">
+              <h3>Trabalho em Equipe</h3>
+              <span>100%</span>
+            </div>
             <p>
-              Profissional com excelente capacidade de comunicação, descontraido
-              porem sempre com seriedade na execução de projetos
+              Profissional com vasta experiência em colaboração e
+              comprometimento com o grupo.
             </p>
-          </div>
-          <div class="skill-rating">
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
           </div>
         </div>
 
-        <div class="skill-card" data-skill-level="8">
-          <div class="skill-icon-wrapper">
-            <img src="assets/imagens/problemas.svg" alt="" />
+        <div class="soft-skill-card-modern" data-skill-level="85">
+          <div class="skill-icon">
+            <i class="fa-solid fa-comments"></i>
           </div>
           <div class="skill-info">
-            <h4>Resolução de Problemas</h4>
+            <div class="skill-title">
+              <h3>Comunicação</h3>
+              <span>85%</span>
+            </div>
             <p>
-              Com vasta experiencia na area Aeronautica, desenvolvi a capacidade
-              de soluções de problemas e levantamento de requisitos.
+              Excelente capacidade de comunicação, foco em clareza e colaboração
+              com equipes multidisciplinares.
             </p>
-          </div>
-          <div class="skill-rating">
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
           </div>
         </div>
 
-        <div class="skill-card" data-skill-level="10">
-          <div class="skill-icon-wrapper">
-            <img src="assets/imagens/adaptabilidade.svg" alt="" />
+        <div class="soft-skill-card-modern" data-skill-level="90">
+          <div class="skill-icon">
+            <i class="fa-solid fa-gears"></i>
           </div>
           <div class="skill-info">
-            <h4>Adaptability</h4>
+            <div class="skill-title">
+              <h3>Resolução de Problemas</h3>
+              <span>90%</span>
+            </div>
             <p>
-              Profissional Extremamente Adaptavel e Interessado em Aprender cada
-              vez mais
+              Experiência em lidar com desafios técnicos e encontrar soluções
+              criativas e eficazes.
             </p>
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
           </div>
-          <div class="skill-rating">
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
+        </div>
+
+        <div class="soft-skill-card-modern" data-skill-level="95">
+          <div class="skill-icon">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+          <div class="skill-info">
+            <div class="skill-title">
+              <h3>Adaptabilidade</h3>
+              <span>95%</span>
+            </div>
+            <p>
+              Profissional flexível e curioso, capaz de se adaptar rapidamente a
+              novas ferramentas e ambientes.
+            </p>
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ======= HARD SKILLS ======= -->
     <section id="skills">
       <div class="skills-container">
-        <h1 class="hard-skills">My Hard Skills</h1>
+        <h1 class="hard-skills">Habilidades Tecnicas</h1>
 
         <div class="carousel-container">
           <button class="prev">&#10094;</button>
@@ -181,8 +162,7 @@
               <img src="./img/logo-python-512.png" alt="Logo Python" />
               <h1>Python</h1>
               <p>
-                Orientação a objetos, análise de dados básica e lógica de
-                programação.
+                Orientação a objetos, análise de dados e lógica de programação.
               </p>
             </div>
 
@@ -192,9 +172,7 @@
                 alt="Logo JavaScript"
               />
               <h1>JavaScript</h1>
-              <p>
-                Manipulação do DOM, lógica e criação de interações dinâmicas.
-              </p>
+              <p>Manipulação do DOM e criação de interações dinâmicas.</p>
             </div>
 
             <div class="card-skill">
@@ -214,21 +192,19 @@
             <div class="card-skill">
               <img src="./img/logo-css-3-256.png" alt="Logo CSS" />
               <h1>CSS</h1>
-              <p>
-                Estilização responsiva, Flexbox, Grid e boas práticas de design.
-              </p>
+              <p>Estilização responsiva e boas práticas de design.</p>
             </div>
 
             <div class="card-skill">
               <img src="./img/git-256.png" alt="Logo Git" />
               <h1>Git</h1>
-              <p>Versionamento de código, branches e colaboração em equipe.</p>
+              <p>Versionamento de código e colaboração em equipe.</p>
             </div>
 
             <div class="card-skill">
               <img src="./img/github-256.png" alt="Logo GitHub" />
               <h1>GitHub</h1>
-              <p>Hospedagem de repositórios, issues e pull requests.</p>
+              <p>Hospedagem de repositórios e controle de versões.</p>
             </div>
           </div>
           <button class="next">&#10095;</button>
@@ -236,6 +212,7 @@
       </div>
     </section>
 
+    <!-- ======= PROJETOS ======= -->
     <section id="projetos">
       <h2>Projetos</h2>
       <div class="carousel-projetos-container">
@@ -267,9 +244,9 @@
           >
             <div class="overlay"></div>
             <div class="info">
-              <h3>Projeto 2</h3>
+              <h3>Site Murilo Fernandes</h3>
               <p>
-                landing page em desenvolvimento para uma banda de louvor gospel
+                Landing page em desenvolvimento para uma banda de louvor gospel.
               </p>
               <a
                 href="https://claudiohenrique012.github.io/Site-Murilo-Fernandes-/"
@@ -285,9 +262,9 @@
           >
             <div class="overlay"></div>
             <div class="info">
-              <h3>Projeto 3</h3>
+              <h3>Cafeteria</h3>
               <p>
-                Projeto simples de uma cafeteria, desenvolvido com HTML e CSS
+                Projeto simples de uma cafeteria desenvolvido com HTML e CSS.
               </p>
               <a
                 href="https://claudiohenrique012.github.io/cafeteria/"
@@ -302,6 +279,7 @@
       </div>
     </section>
 
+    <!-- ======= CONTATO ======= -->
     <section id="contato">
       <h2>Contato</h2>
       <p>
@@ -321,10 +299,12 @@
       </a>
     </section>
 
+    <!-- ======= RODAPÉ ======= -->
     <footer>
       <p>&copy; 2025 Cláudio Henrique. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Script -->
     <script src="./script.js"></script>
   </body>
 </html>

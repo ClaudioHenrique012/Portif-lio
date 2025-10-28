@@ -1,26 +1,23 @@
+// ===============================
+// 🎯 CARROSSEL DE HARD SKILLS
+// ===============================
+
 const carousel = document.querySelector(".carousel");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
+const cards = document.querySelectorAll(".card-skill");
 
 let index = 0;
 
-const cards = document.querySelectorAll(".card-skill");
-
 function getCardWidth() {
-  return cards[0].offsetWidth + 20; // largura do card + margem (ajuste se necessário)
+  return cards[0].offsetWidth + 20;
 }
 
 nextBtn.addEventListener("click", () => {
   const cardWidth = getCardWidth();
   const maxIndex =
     cards.length - Math.floor(carousel.parentElement.offsetWidth / cardWidth);
-
-  if (index < maxIndex) {
-    index++;
-  } else {
-    index = 0;
-  }
-
+  index = index < maxIndex ? index + 1 : 0;
   carousel.style.transform = `translateX(${-index * cardWidth}px)`;
 });
 
@@ -28,15 +25,13 @@ prevBtn.addEventListener("click", () => {
   const cardWidth = getCardWidth();
   const maxIndex =
     cards.length - Math.floor(carousel.parentElement.offsetWidth / cardWidth);
-
-  if (index > 0) {
-    index--;
-  } else {
-    index = maxIndex;
-  }
-
+  index = index > 0 ? index - 1 : maxIndex;
   carousel.style.transform = `translateX(${-index * cardWidth}px)`;
 });
+
+// ===============================
+// 💼 CARROSSEL DE PROJETOS
+// ===============================
 
 const carouselProjetos = document.querySelector(".carousel-projetos");
 const cardsProjetos = document.querySelectorAll(".card-projeto");
@@ -61,23 +56,32 @@ nextProjeto.addEventListener("click", () => {
   showProjeto(currentIndexProjetos);
 });
 
+// ===============================
+// ⭐ ATIVAÇÃO DOS NÍVEIS DE SOFT SKILLS
+// ===============================
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Seleciona todos os cards de habilidade
-  const skillCards = document.querySelectorAll(".skill-card");
+  const skillCards = document.querySelectorAll(".soft-skill-card");
 
   skillCards.forEach((card) => {
-    // Pega o nível da habilidade (de 1 a 10) do atributo data
     const skillLevel = parseInt(card.dataset.skillLevel, 10);
-
-    // Seleciona todos os segmentos DENTRO deste card
     const segments = card.querySelectorAll(".skill-rating .segment");
 
-    // Itera e ativa o número correto de segmentos
     for (let i = 0; i < skillLevel; i++) {
-      // Verifica se o segmento existe antes de adicionar a classe
       if (segments[i]) {
         segments[i].classList.add("active");
       }
     }
+  });
+});
+
+// Animação das barras de progresso das soft skills
+document.addEventListener("DOMContentLoaded", () => {
+  const skillCards = document.querySelectorAll(".soft-skill-card-modern");
+
+  skillCards.forEach((card) => {
+    const level = card.dataset.skillLevel;
+    const fill = card.querySelector(".progress-fill");
+    fill.style.width = level + "%";
   });
 });
